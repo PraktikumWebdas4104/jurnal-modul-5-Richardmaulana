@@ -16,12 +16,11 @@
 				if (strlen($nama)<=25 && is_string($nama) ==TRUE) {
 					if(strpos($email, '@gmail.com')==TRUE){
 						if ($nim!==$row['nim']) {
-								
+							
 							$sql = $koneksi->query("
 								INSERT INTO `mhs` (`nim`, `nama`, `email`)
 								VALUES ('$nim', '$nama', '$email')");
 							echo "REGISTRASI SUKSES<br>";
-							}
 						}
 						else{
 							echo "Nim sudah digunakan";
